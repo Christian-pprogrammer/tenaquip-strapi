@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "satisfaction_guarantees",
+  "info": {
+    "singularName": "satisfaction-guarantee",
+    "pluralName": "satisfaction-guarantees",
+    "displayName": "satisfactionGuarantee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.main-title",
+        "components.paragraph"
+      ]
+    }
+  }
+}

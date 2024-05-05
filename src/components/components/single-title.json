@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_single_titles",
+  "info": {
+    "displayName": "SubTitle",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "LinkText": {
+      "type": "string"
+    }
+  }
+}

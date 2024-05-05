@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_paragraphs",
+  "info": {
+    "displayName": "paragraph",
+    "icon": "cup",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Ptext": {
+      "type": "text"
+    }
+  }
+}

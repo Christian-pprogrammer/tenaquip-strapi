@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_finalMembers",
+  "info": {
+    "displayName": "ImageCard",
+    "icon": "chartBubble",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

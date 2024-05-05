@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_heading_and_paragraphs",
+  "info": {
+    "displayName": "HeadingAndParagraph",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "buttonTitle": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "mediaLink": {
+      "type": "string"
+    }
+  }
+}

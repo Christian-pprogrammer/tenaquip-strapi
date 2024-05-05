@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_components_list_tests",
+  "info": {
+    "displayName": "ListTest",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "Listexample": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.paragraph"
+    }
+  }
+}

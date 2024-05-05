@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_jobs_tables",
+  "info": {
+    "displayName": "JobsTable",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "jobTitle": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "employmentLevel": {
+      "type": "string"
+    },
+    "JobLink": {
+      "type": "string"
+    },
+    "jobId": {
+      "type": "string"
+    }
+  }
+}

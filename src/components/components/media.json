@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_media",
+  "info": {
+    "displayName": "Media",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "videoLink": {
+      "type": "string"
+    },
+    "imageLink": {
+      "type": "string"
+    }
+  }
+}

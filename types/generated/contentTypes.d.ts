@@ -788,6 +788,437 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.media',
+        'components.paragraph',
+        'components.main-title',
+        'components.finalmember'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCareerCareer extends Schema.SingleType {
+  collectionName: 'careers';
+  info: {
+    singularName: 'career';
+    pluralName: 'careers';
+    displayName: 'Career';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.paragraph',
+        'components.main-title',
+        'components.p-link'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElectricalElectrical extends Schema.SingleType {
+  collectionName: 'electricals';
+  info: {
+    singularName: 'electrical';
+    pluralName: 'electricals';
+    displayName: 'Electrical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.landing', 'components.recognition-comp']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::electrical.electrical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::electrical.electrical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEmergencyPreparednessEmergencyPreparedness
+  extends Schema.SingleType {
+  collectionName: 'emergency_preparednesses';
+  info: {
+    singularName: 'emergency-preparedness';
+    pluralName: 'emergency-preparednesses';
+    displayName: 'Emergency-preparedness';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.landing', 'components.recognition-comp']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::emergency-preparedness.emergency-preparedness',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::emergency-preparedness.emergency-preparedness',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGlobalSourcingGlobalSourcing extends Schema.SingleType {
+  collectionName: 'global_sourcings';
+  info: {
+    singularName: 'global-sourcing';
+    pluralName: 'global-sourcings';
+    displayName: 'GlobalSourcing';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.landing', 'components.main-title', 'components.paragraph']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-sourcing.global-sourcing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-sourcing.global-sourcing',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiJobJob extends Schema.SingleType {
+  collectionName: 'jobs';
+  info: {
+    singularName: 'job';
+    pluralName: 'jobs';
+    displayName: 'Job';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<['components.jobs-table']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMembersOfMembersOf extends Schema.SingleType {
+  collectionName: 'members_ofs';
+  info: {
+    singularName: 'members-of';
+    pluralName: 'members-ofs';
+    displayName: 'members-of';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.member',
+        'components.single-member',
+        'components.finalmember'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::members-of.members-of',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::members-of.members-of',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNmsoNmso extends Schema.SingleType {
+  collectionName: 'nmsos';
+  info: {
+    singularName: 'nmso';
+    pluralName: 'nmsos';
+    displayName: 'Nmso';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nmsoPage: Attribute.DynamicZone<
+      ['components.single-title', 'components.landing', 'components.main-title']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::nmso.nmso', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::nmso.nmso', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRecognitionRecognition extends Schema.SingleType {
+  collectionName: 'recognitions';
+  info: {
+    singularName: 'recognition';
+    pluralName: 'recognitions';
+    displayName: 'Recognition';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.recognition-comp', 'components.landing']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::recognition.recognition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::recognition.recognition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResourceCategoryResourceCategory
+  extends Schema.CollectionType {
+  collectionName: 'resource_categories';
+  info: {
+    singularName: 'resource-category';
+    pluralName: 'resource-categories';
+    displayName: 'resourceCategory';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<['components.resources-categories']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resource-category.resource-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resource-category.resource-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSatisfactionGuaranteeSatisfactionGuarantee
+  extends Schema.SingleType {
+  collectionName: 'satisfaction_guarantees';
+  info: {
+    singularName: 'satisfaction-guarantee';
+    pluralName: 'satisfaction-guarantees';
+    displayName: 'satisfactionGuarantee';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.landing', 'components.main-title', 'components.paragraph']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::satisfaction-guarantee.satisfaction-guarantee',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::satisfaction-guarantee.satisfaction-guarantee',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTenaquipFoundationTenaquipFoundation
+  extends Schema.SingleType {
+  collectionName: 'tenaquip_foundations';
+  info: {
+    singularName: 'tenaquip-foundation';
+    pluralName: 'tenaquip-foundations';
+    displayName: 'TenaquipFoundation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.media'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tenaquip-foundation.tenaquip-foundation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tenaquip-foundation.tenaquip-foundation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTenaquipWayTenaquipWay extends Schema.SingleType {
+  collectionName: 'tenaquip_ways';
+  info: {
+    singularName: 'tenaquip-way';
+    pluralName: 'tenaquip-ways';
+    displayName: 'tenaquipWay';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.paragraph',
+        'components.recognition-comp'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::tenaquip-way.tenaquip-way',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::tenaquip-way.tenaquip-way',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -806,6 +1237,19 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about.about': ApiAboutAbout;
+      'api::career.career': ApiCareerCareer;
+      'api::electrical.electrical': ApiElectricalElectrical;
+      'api::emergency-preparedness.emergency-preparedness': ApiEmergencyPreparednessEmergencyPreparedness;
+      'api::global-sourcing.global-sourcing': ApiGlobalSourcingGlobalSourcing;
+      'api::job.job': ApiJobJob;
+      'api::members-of.members-of': ApiMembersOfMembersOf;
+      'api::nmso.nmso': ApiNmsoNmso;
+      'api::recognition.recognition': ApiRecognitionRecognition;
+      'api::resource-category.resource-category': ApiResourceCategoryResourceCategory;
+      'api::satisfaction-guarantee.satisfaction-guarantee': ApiSatisfactionGuaranteeSatisfactionGuarantee;
+      'api::tenaquip-foundation.tenaquip-foundation': ApiTenaquipFoundationTenaquipFoundation;
+      'api::tenaquip-way.tenaquip-way': ApiTenaquipWayTenaquipWay;
     }
   }
 }

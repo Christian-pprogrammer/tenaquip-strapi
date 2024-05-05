@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_components_landings",
+  "info": {
+    "displayName": "Landing",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

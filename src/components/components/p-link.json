@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_p_links",
+  "info": {
+    "displayName": "PLink",
+    "icon": "discuss"
+  },
+  "options": {},
+  "attributes": {
+    "linkTitle": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    }
+  }
+}

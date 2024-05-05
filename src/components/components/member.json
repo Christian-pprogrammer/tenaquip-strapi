@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_members",
+  "info": {
+    "displayName": "membersList",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "singleMember": {
+      "displayName": "singleMember",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.single-member"
+    }
+  }
+}

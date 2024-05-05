@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_single_members",
+  "info": {
+    "displayName": "SingleMember",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

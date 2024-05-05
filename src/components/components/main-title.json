@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_main_titles",
+  "info": {
+    "displayName": "MainTitle",
+    "icon": "cloud"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TitleUrl": {
+      "type": "string"
+    }
+  }
+}

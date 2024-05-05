@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_resources_categories",
+  "info": {
+    "displayName": "resources-categories",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
