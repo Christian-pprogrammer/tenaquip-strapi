@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ComponentsAgencies extends Schema.Component {
+  collectionName: 'components_components_agencies';
+  info: {
+    displayName: 'Agencies';
+    icon: 'book';
+    description: '';
+  };
+  attributes: {
+    agencyName: Attribute.String;
+  };
+}
+
 export interface ComponentsFinalmember extends Schema.Component {
   collectionName: 'components_components_finalMembers';
   info: {
@@ -58,6 +70,23 @@ export interface ComponentsLanding extends Schema.Component {
     title: Attribute.String;
     imageUrl: Attribute.String;
     subTitle: Attribute.String;
+  };
+}
+
+export interface ComponentsLineCards extends Schema.Component {
+  collectionName: 'components_components_line_cards';
+  info: {
+    displayName: 'LineCards';
+    icon: 'exit';
+  };
+  attributes: {
+    ImageUrl: Attribute.String;
+    pdfLink: Attribute.String;
+    Title: Attribute.String;
+    button1Text: Attribute.String;
+    button1Link: Attribute.String;
+    button2Text: Attribute.String;
+    button2Link: Attribute.String;
   };
 }
 
@@ -143,6 +172,7 @@ export interface ComponentsRecognitionComp extends Schema.Component {
     year: Attribute.String;
     title: Attribute.String;
     description: Attribute.Text;
+    optionalImageUrl: Attribute.String;
   };
 }
 
@@ -190,10 +220,12 @@ export interface ComponentsSingleTitle extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'components.agencies': ComponentsAgencies;
       'components.finalmember': ComponentsFinalmember;
       'components.heading-and-paragraph': ComponentsHeadingAndParagraph;
       'components.jobs-table': ComponentsJobsTable;
       'components.landing': ComponentsLanding;
+      'components.line-cards': ComponentsLineCards;
       'components.list-test': ComponentsListTest;
       'components.main-title': ComponentsMainTitle;
       'components.media': ComponentsMedia;

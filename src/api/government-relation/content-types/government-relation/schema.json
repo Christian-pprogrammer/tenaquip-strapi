@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "government_relations",
+  "info": {
+    "singularName": "government-relation",
+    "pluralName": "government-relations",
+    "displayName": "GovernmentRelation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.heading-and-paragraph",
+        "components.paragraph",
+        "components.main-title"
+      ]
+    }
+  }
+}

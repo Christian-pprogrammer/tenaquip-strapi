@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_agencies",
+  "info": {
+    "displayName": "Agencies",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "agencyName": {
+      "type": "string"
+    }
+  }
+}

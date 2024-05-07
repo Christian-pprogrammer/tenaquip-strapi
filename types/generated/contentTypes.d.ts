@@ -827,6 +827,39 @@ export interface ApiAboutAbout extends Schema.SingleType {
   };
 }
 
+export interface ApiAgencyAgency extends Schema.SingleType {
+  collectionName: 'agencies';
+  info: {
+    singularName: 'agency';
+    pluralName: 'agencies';
+    displayName: 'Agency';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.agencies', 'components.main-title']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::agency.agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::agency.agency',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Schema.SingleType {
   collectionName: 'careers';
   info: {
@@ -963,6 +996,44 @@ export interface ApiGlobalSourcingGlobalSourcing extends Schema.SingleType {
   };
 }
 
+export interface ApiGovernmentRelationGovernmentRelation
+  extends Schema.SingleType {
+  collectionName: 'government_relations';
+  info: {
+    singularName: 'government-relation';
+    pluralName: 'government-relations';
+    displayName: 'GovernmentRelation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.paragraph',
+        'components.main-title'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::government-relation.government-relation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::government-relation.government-relation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiJobJob extends Schema.SingleType {
   collectionName: 'jobs';
   info: {
@@ -981,6 +1052,37 @@ export interface ApiJobJob extends Schema.SingleType {
     createdBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLineCardLineCard extends Schema.SingleType {
+  collectionName: 'line_cards';
+  info: {
+    singularName: 'line-card';
+    pluralName: 'line-cards';
+    displayName: 'LineCard';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<['components.line-cards']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::line-card.line-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::line-card.line-card',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -1146,6 +1248,45 @@ export interface ApiSatisfactionGuaranteeSatisfactionGuarantee
   };
 }
 
+export interface ApiSustainabilitySustainability extends Schema.SingleType {
+  collectionName: 'sustainabilities';
+  info: {
+    singularName: 'sustainability';
+    pluralName: 'sustainabilities';
+    displayName: 'Sustainability';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.paragraph',
+        'components.finalmember',
+        'components.recognition-comp',
+        'components.heading-and-paragraph'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sustainability.sustainability',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sustainability.sustainability',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTenaquipFoundationTenaquipFoundation
   extends Schema.SingleType {
   collectionName: 'tenaquip_foundations';
@@ -1238,16 +1379,20 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
+      'api::agency.agency': ApiAgencyAgency;
       'api::career.career': ApiCareerCareer;
       'api::electrical.electrical': ApiElectricalElectrical;
       'api::emergency-preparedness.emergency-preparedness': ApiEmergencyPreparednessEmergencyPreparedness;
       'api::global-sourcing.global-sourcing': ApiGlobalSourcingGlobalSourcing;
+      'api::government-relation.government-relation': ApiGovernmentRelationGovernmentRelation;
       'api::job.job': ApiJobJob;
+      'api::line-card.line-card': ApiLineCardLineCard;
       'api::members-of.members-of': ApiMembersOfMembersOf;
       'api::nmso.nmso': ApiNmsoNmso;
       'api::recognition.recognition': ApiRecognitionRecognition;
       'api::resource-category.resource-category': ApiResourceCategoryResourceCategory;
       'api::satisfaction-guarantee.satisfaction-guarantee': ApiSatisfactionGuaranteeSatisfactionGuarantee;
+      'api::sustainability.sustainability': ApiSustainabilitySustainability;
       'api::tenaquip-foundation.tenaquip-foundation': ApiTenaquipFoundationTenaquipFoundation;
       'api::tenaquip-way.tenaquip-way': ApiTenaquipWayTenaquipWay;
     }

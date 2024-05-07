@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_components_line_cards",
+  "info": {
+    "displayName": "LineCards",
+    "icon": "exit"
+  },
+  "options": {},
+  "attributes": {
+    "ImageUrl": {
+      "type": "string"
+    },
+    "pdfLink": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "button1Text": {
+      "type": "string"
+    },
+    "button1Link": {
+      "type": "string"
+    },
+    "button2Text": {
+      "type": "string"
+    },
+    "button2Link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "line_cards",
+  "info": {
+    "singularName": "line-card",
+    "pluralName": "line-cards",
+    "displayName": "LineCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.line-cards"
+      ]
+    }
+  }
+}
