@@ -158,6 +158,7 @@ export interface ComponentsParagraph extends Schema.Component {
   };
   attributes: {
     Ptext: Attribute.Text;
+    optionalLink: Attribute.String;
   };
 }
 

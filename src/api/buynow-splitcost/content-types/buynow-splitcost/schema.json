@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "buynow_splitcosts",
+  "info": {
+    "singularName": "buynow-splitcost",
+    "pluralName": "buynow-splitcosts",
+    "displayName": "buynowSplitcost"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.finalmember",
+        "components.media",
+        "components.heading-and-paragraph"
+      ]
+    }
+  }
+}

@@ -860,6 +860,43 @@ export interface ApiAgencyAgency extends Schema.SingleType {
   };
 }
 
+export interface ApiBuynowSplitcostBuynowSplitcost extends Schema.SingleType {
+  collectionName: 'buynow_splitcosts';
+  info: {
+    singularName: 'buynow-splitcost';
+    pluralName: 'buynow-splitcosts';
+    displayName: 'buynowSplitcost';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.finalmember',
+        'components.media',
+        'components.heading-and-paragraph'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::buynow-splitcost.buynow-splitcost',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::buynow-splitcost.buynow-splitcost',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Schema.SingleType {
   collectionName: 'careers';
   info: {
@@ -891,6 +928,44 @@ export interface ApiCareerCareer extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCoursesSeminarsSurveyCoursesSeminarsSurvey
+  extends Schema.SingleType {
+  collectionName: 'courses_seminars_surveys';
+  info: {
+    singularName: 'courses-seminars-survey';
+    pluralName: 'courses-seminars-surveys';
+    displayName: 'courses-seminars-survey';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.paragraph',
+        'components.main-title'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::courses-seminars-survey.courses-seminars-survey',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::courses-seminars-survey.courses-seminars-survey',
       'oneToOne',
       'admin::user'
     > &
@@ -963,6 +1038,42 @@ export interface ApiEmergencyPreparednessEmergencyPreparedness
   };
 }
 
+export interface ApiFreeDeliveryFreeDelivery extends Schema.SingleType {
+  collectionName: 'free_deliveries';
+  info: {
+    singularName: 'free-delivery';
+    pluralName: 'free-deliveries';
+    displayName: 'FreeDelivery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.media'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::free-delivery.free-delivery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::free-delivery.free-delivery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGlobalSourcingGlobalSourcing extends Schema.SingleType {
   collectionName: 'global_sourcings';
   info: {
@@ -1027,6 +1138,38 @@ export interface ApiGovernmentRelationGovernmentRelation
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::government-relation.government-relation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHunterGroupHunterGroup extends Schema.SingleType {
+  collectionName: 'hunter_groups';
+  info: {
+    singularName: 'hunter-group';
+    pluralName: 'hunter-groups';
+    displayName: 'HunterGroup';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.landing', 'components.heading-and-paragraph']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hunter-group.hunter-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hunter-group.hunter-group',
       'oneToOne',
       'admin::user'
     > &
@@ -1380,11 +1523,15 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
       'api::agency.agency': ApiAgencyAgency;
+      'api::buynow-splitcost.buynow-splitcost': ApiBuynowSplitcostBuynowSplitcost;
       'api::career.career': ApiCareerCareer;
+      'api::courses-seminars-survey.courses-seminars-survey': ApiCoursesSeminarsSurveyCoursesSeminarsSurvey;
       'api::electrical.electrical': ApiElectricalElectrical;
       'api::emergency-preparedness.emergency-preparedness': ApiEmergencyPreparednessEmergencyPreparedness;
+      'api::free-delivery.free-delivery': ApiFreeDeliveryFreeDelivery;
       'api::global-sourcing.global-sourcing': ApiGlobalSourcingGlobalSourcing;
       'api::government-relation.government-relation': ApiGovernmentRelationGovernmentRelation;
+      'api::hunter-group.hunter-group': ApiHunterGroupHunterGroup;
       'api::job.job': ApiJobJob;
       'api::line-card.line-card': ApiLineCardLineCard;
       'api::members-of.members-of': ApiMembersOfMembersOf;

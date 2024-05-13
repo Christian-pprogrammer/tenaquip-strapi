@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "courses_seminars_surveys",
+  "info": {
+    "singularName": "courses-seminars-survey",
+    "pluralName": "courses-seminars-surveys",
+    "displayName": "courses-seminars-survey"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.heading-and-paragraph",
+        "components.paragraph",
+        "components.main-title"
+      ]
+    }
+  }
+}

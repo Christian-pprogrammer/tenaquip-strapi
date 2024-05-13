@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "free_deliveries",
+  "info": {
+    "singularName": "free-delivery",
+    "pluralName": "free-deliveries",
+    "displayName": "FreeDelivery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.heading-and-paragraph",
+        "components.media"
+      ]
+    }
+  }
+}

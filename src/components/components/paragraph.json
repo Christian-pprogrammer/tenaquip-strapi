@@ -9,6 +9,9 @@
   "attributes": {
     "Ptext": {
       "type": "text"
+    },
+    "optionalLink": {
+      "type": "string"
     }
   }
 }
