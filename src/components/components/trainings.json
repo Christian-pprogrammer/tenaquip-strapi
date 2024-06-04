@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_components_trainings",
+  "info": {
+    "displayName": "trainings",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "trainingName": {
+      "type": "string"
+    }
+  }
+}

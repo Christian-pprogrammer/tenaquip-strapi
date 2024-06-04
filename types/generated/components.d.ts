@@ -218,6 +218,17 @@ export interface ComponentsSingleTitle extends Schema.Component {
   };
 }
 
+export interface ComponentsTrainings extends Schema.Component {
+  collectionName: 'components_components_trainings';
+  info: {
+    displayName: 'trainings';
+    icon: 'code';
+  };
+  attributes: {
+    trainingName: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -237,6 +248,7 @@ declare module '@strapi/types' {
       'components.resources-categories': ComponentsResourcesCategories;
       'components.single-member': ComponentsSingleMember;
       'components.single-title': ComponentsSingleTitle;
+      'components.trainings': ComponentsTrainings;
     }
   }
 }

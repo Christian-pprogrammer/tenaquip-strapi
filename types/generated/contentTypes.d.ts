@@ -897,6 +897,42 @@ export interface ApiBuynowSplitcostBuynowSplitcost extends Schema.SingleType {
   };
 }
 
+export interface ApiCalibrationCalibration extends Schema.SingleType {
+  collectionName: 'calibrations';
+  info: {
+    singularName: 'calibration';
+    pluralName: 'calibrations';
+    displayName: 'calibration';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.finalmember'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::calibration.calibration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::calibration.calibration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Schema.SingleType {
   collectionName: 'careers';
   info: {
@@ -1145,6 +1181,39 @@ export interface ApiGovernmentRelationGovernmentRelation
   };
 }
 
+export interface ApiHunterFormHunterForm extends Schema.CollectionType {
+  collectionName: 'hunter_forms';
+  info: {
+    singularName: 'hunter-form';
+    pluralName: 'hunter-forms';
+    displayName: 'hunter-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    email: Attribute.String;
+    phone: Attribute.String;
+    message: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hunter-form.hunter-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hunter-form.hunter-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHunterGroupHunterGroup extends Schema.SingleType {
   collectionName: 'hunter_groups';
   info: {
@@ -1199,6 +1268,44 @@ export interface ApiJobJob extends Schema.SingleType {
   };
 }
 
+export interface ApiKeyAccountKeyAccount extends Schema.SingleType {
+  collectionName: 'key_accounts';
+  info: {
+    singularName: 'key-account';
+    pluralName: 'key-accounts';
+    displayName: 'keyAccount';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.paragraph',
+        'components.main-title',
+        'components.media'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::key-account.key-account',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::key-account.key-account',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLineCardLineCard extends Schema.SingleType {
   collectionName: 'line_cards';
   info: {
@@ -1223,6 +1330,45 @@ export interface ApiLineCardLineCard extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::line-card.line-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMaintenanceShutdownProgramMaintenanceShutdownProgram
+  extends Schema.SingleType {
+  collectionName: 'maintenance_shutdown_programs';
+  info: {
+    singularName: 'maintenance-shutdown-program';
+    pluralName: 'maintenance-shutdown-programs';
+    displayName: 'maintenance-shutdown-program';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.heading-and-paragraph',
+        'components.landing',
+        'components.main-title',
+        'components.media',
+        'components.paragraph'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::maintenance-shutdown-program.maintenance-shutdown-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::maintenance-shutdown-program.maintenance-shutdown-program',
       'oneToOne',
       'admin::user'
     > &
@@ -1503,6 +1649,39 @@ export interface ApiTenaquipWayTenaquipWay extends Schema.SingleType {
   };
 }
 
+export interface ApiTrainingAndSurveyTrainingAndSurvey
+  extends Schema.SingleType {
+  collectionName: 'training_and_surveys';
+  info: {
+    singularName: 'training-and-survey';
+    pluralName: 'training-and-surveys';
+    displayName: 'TrainingAndSurvey';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      ['components.main-title', 'components.trainings']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::training-and-survey.training-and-survey',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::training-and-survey.training-and-survey',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1524,6 +1703,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::agency.agency': ApiAgencyAgency;
       'api::buynow-splitcost.buynow-splitcost': ApiBuynowSplitcostBuynowSplitcost;
+      'api::calibration.calibration': ApiCalibrationCalibration;
       'api::career.career': ApiCareerCareer;
       'api::courses-seminars-survey.courses-seminars-survey': ApiCoursesSeminarsSurveyCoursesSeminarsSurvey;
       'api::electrical.electrical': ApiElectricalElectrical;
@@ -1531,9 +1711,12 @@ declare module '@strapi/types' {
       'api::free-delivery.free-delivery': ApiFreeDeliveryFreeDelivery;
       'api::global-sourcing.global-sourcing': ApiGlobalSourcingGlobalSourcing;
       'api::government-relation.government-relation': ApiGovernmentRelationGovernmentRelation;
+      'api::hunter-form.hunter-form': ApiHunterFormHunterForm;
       'api::hunter-group.hunter-group': ApiHunterGroupHunterGroup;
       'api::job.job': ApiJobJob;
+      'api::key-account.key-account': ApiKeyAccountKeyAccount;
       'api::line-card.line-card': ApiLineCardLineCard;
+      'api::maintenance-shutdown-program.maintenance-shutdown-program': ApiMaintenanceShutdownProgramMaintenanceShutdownProgram;
       'api::members-of.members-of': ApiMembersOfMembersOf;
       'api::nmso.nmso': ApiNmsoNmso;
       'api::recognition.recognition': ApiRecognitionRecognition;
@@ -1542,6 +1725,7 @@ declare module '@strapi/types' {
       'api::sustainability.sustainability': ApiSustainabilitySustainability;
       'api::tenaquip-foundation.tenaquip-foundation': ApiTenaquipFoundationTenaquipFoundation;
       'api::tenaquip-way.tenaquip-way': ApiTenaquipWayTenaquipWay;
+      'api::training-and-survey.training-and-survey': ApiTrainingAndSurveyTrainingAndSurvey;
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "key_accounts",
+  "info": {
+    "singularName": "key-account",
+    "pluralName": "key-accounts",
+    "displayName": "keyAccount"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.landing",
+        "components.heading-and-paragraph",
+        "components.paragraph",
+        "components.main-title",
+        "components.media"
+      ]
+    }
+  }
+}

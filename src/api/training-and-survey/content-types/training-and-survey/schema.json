@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "training_and_surveys",
+  "info": {
+    "singularName": "training-and-survey",
+    "pluralName": "training-and-surveys",
+    "displayName": "TrainingAndSurvey"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.main-title",
+        "components.trainings"
+      ]
+    }
+  }
+}

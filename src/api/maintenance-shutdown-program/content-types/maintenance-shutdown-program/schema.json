@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "maintenance_shutdown_programs",
+  "info": {
+    "singularName": "maintenance-shutdown-program",
+    "pluralName": "maintenance-shutdown-programs",
+    "displayName": "maintenance-shutdown-program"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "components.heading-and-paragraph",
+        "components.landing",
+        "components.main-title",
+        "components.media",
+        "components.paragraph"
+      ]
+    }
+  }
+}
