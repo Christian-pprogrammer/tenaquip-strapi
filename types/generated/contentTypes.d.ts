@@ -897,6 +897,39 @@ export interface ApiBuynowSplitcostBuynowSplitcost extends Schema.SingleType {
   };
 }
 
+export interface ApiCabinetProgramCabinetProgram extends Schema.CollectionType {
+  collectionName: 'cabinet_programs';
+  info: {
+    singularName: 'cabinet-program';
+    pluralName: 'cabinet-programs';
+    displayName: 'cabinet-program';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    email: Attribute.String;
+    phone: Attribute.String;
+    message: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cabinet-program.cabinet-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cabinet-program.cabinet-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCalibrationCalibration extends Schema.SingleType {
   collectionName: 'calibrations';
   info: {
@@ -964,6 +997,43 @@ export interface ApiCareerCareer extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactContact extends Schema.CollectionType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company: Attribute.String;
+    name: Attribute.String;
+    email: Attribute.String;
+    extension: Attribute.String;
+    phone: Attribute.String;
+    province: Attribute.String;
+    message: Attribute.Text;
+    attachment: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
       'oneToOne',
       'admin::user'
     > &
@@ -1439,6 +1509,39 @@ export interface ApiNmsoNmso extends Schema.SingleType {
   };
 }
 
+export interface ApiOrderOrder extends Schema.CollectionType {
+  collectionName: 'orders';
+  info: {
+    singularName: 'order';
+    pluralName: 'orders';
+    displayName: 'order';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    orderNumber: Attribute.String;
+    email: Attribute.String;
+    zipCode: Attribute.String;
+    orderDescription: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRecognitionRecognition extends Schema.SingleType {
   collectionName: 'recognitions';
   info: {
@@ -1682,6 +1785,50 @@ export interface ApiTrainingAndSurveyTrainingAndSurvey
   };
 }
 
+export interface ApiVendorManagementVendorManagement extends Schema.SingleType {
+  collectionName: 'vendor_managements';
+  info: {
+    singularName: 'vendor-management';
+    pluralName: 'vendor-managements';
+    displayName: 'vendor-management';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PageContent: Attribute.DynamicZone<
+      [
+        'components.landing',
+        'components.heading-and-paragraph',
+        'components.main-title',
+        'components.media',
+        'components.paragraph'
+      ]
+    >;
+    list: Attribute.Component<'components.list', true>;
+    headerParagraphList: Attribute.Component<
+      'components.header-paragraph-list',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::vendor-management.vendor-management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::vendor-management.vendor-management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1703,8 +1850,10 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::agency.agency': ApiAgencyAgency;
       'api::buynow-splitcost.buynow-splitcost': ApiBuynowSplitcostBuynowSplitcost;
+      'api::cabinet-program.cabinet-program': ApiCabinetProgramCabinetProgram;
       'api::calibration.calibration': ApiCalibrationCalibration;
       'api::career.career': ApiCareerCareer;
+      'api::contact.contact': ApiContactContact;
       'api::courses-seminars-survey.courses-seminars-survey': ApiCoursesSeminarsSurveyCoursesSeminarsSurvey;
       'api::electrical.electrical': ApiElectricalElectrical;
       'api::emergency-preparedness.emergency-preparedness': ApiEmergencyPreparednessEmergencyPreparedness;
@@ -1719,6 +1868,7 @@ declare module '@strapi/types' {
       'api::maintenance-shutdown-program.maintenance-shutdown-program': ApiMaintenanceShutdownProgramMaintenanceShutdownProgram;
       'api::members-of.members-of': ApiMembersOfMembersOf;
       'api::nmso.nmso': ApiNmsoNmso;
+      'api::order.order': ApiOrderOrder;
       'api::recognition.recognition': ApiRecognitionRecognition;
       'api::resource-category.resource-category': ApiResourceCategoryResourceCategory;
       'api::satisfaction-guarantee.satisfaction-guarantee': ApiSatisfactionGuaranteeSatisfactionGuarantee;
@@ -1726,6 +1876,7 @@ declare module '@strapi/types' {
       'api::tenaquip-foundation.tenaquip-foundation': ApiTenaquipFoundationTenaquipFoundation;
       'api::tenaquip-way.tenaquip-way': ApiTenaquipWayTenaquipWay;
       'api::training-and-survey.training-and-survey': ApiTrainingAndSurveyTrainingAndSurvey;
+      'api::vendor-management.vendor-management': ApiVendorManagementVendorManagement;
     }
   }
 }

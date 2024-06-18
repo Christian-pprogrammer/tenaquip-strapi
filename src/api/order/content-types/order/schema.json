@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "orderDescription": {
+      "type": "text"
+    }
+  }
+}

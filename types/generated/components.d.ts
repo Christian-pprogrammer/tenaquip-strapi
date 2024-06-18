@@ -27,6 +27,18 @@ export interface ComponentsFinalmember extends Schema.Component {
   };
 }
 
+export interface ComponentsHeaderParagraphList extends Schema.Component {
+  collectionName: 'components_components_header_paragraph_lists';
+  info: {
+    displayName: 'headerParagraphList';
+    icon: 'bell';
+  };
+  attributes: {
+    header: Attribute.String;
+    paragraph: Attribute.String;
+  };
+}
+
 export interface ComponentsHeadingAndParagraph extends Schema.Component {
   collectionName: 'components_components_heading_and_paragraphs';
   info: {
@@ -98,6 +110,19 @@ export interface ComponentsListTest extends Schema.Component {
   };
   attributes: {
     Listexample: Attribute.Component<'components.paragraph', true>;
+  };
+}
+
+export interface ComponentsList extends Schema.Component {
+  collectionName: 'components_components_lists';
+  info: {
+    displayName: 'list';
+    icon: 'cog';
+    description: '';
+  };
+  attributes: {
+    infoTitle: Attribute.String;
+    infoLink: Attribute.String;
   };
 }
 
@@ -234,11 +259,13 @@ declare module '@strapi/types' {
     export interface Components {
       'components.agencies': ComponentsAgencies;
       'components.finalmember': ComponentsFinalmember;
+      'components.header-paragraph-list': ComponentsHeaderParagraphList;
       'components.heading-and-paragraph': ComponentsHeadingAndParagraph;
       'components.jobs-table': ComponentsJobsTable;
       'components.landing': ComponentsLanding;
       'components.line-cards': ComponentsLineCards;
       'components.list-test': ComponentsListTest;
+      'components.list': ComponentsList;
       'components.main-title': ComponentsMainTitle;
       'components.media': ComponentsMedia;
       'components.member': ComponentsMember;

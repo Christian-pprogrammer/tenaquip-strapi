@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_lists",
+  "info": {
+    "displayName": "list",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "infoTitle": {
+      "type": "string"
+    },
+    "infoLink": {
+      "type": "string"
+    }
+  }
+}

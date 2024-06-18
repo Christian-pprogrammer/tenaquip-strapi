@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cabinet_programs",
+  "info": {
+    "singularName": "cabinet-program",
+    "pluralName": "cabinet-programs",
+    "displayName": "cabinet-program"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

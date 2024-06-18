@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_components_header_paragraph_lists",
+  "info": {
+    "displayName": "headerParagraphList",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "string"
+    }
+  }
+}
